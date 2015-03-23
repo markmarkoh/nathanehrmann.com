@@ -23,5 +23,16 @@
     ga('create', 'UA-61099802-1', 'auto');
     ga('send', 'pageview');
   </script>
+  <script>
+    window.onbeforeunload= function (e) {
+    	if(!e) e = window.event;
+    	e.cancelBubble = true;
+    	e.returnValue = 'You sure you want to leave nathanehrmann.com?'; 
+    	if (e.stopPropagation) {
+    		e.stopPropagation();
+    		e.preventDefault();
+    	}
+    };
+  </script>
 </body>
 </html>
